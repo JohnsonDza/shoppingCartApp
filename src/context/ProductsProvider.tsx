@@ -53,7 +53,7 @@ export const ProductsProvider = ({ children }: ChildrenType): ReactElement => {
     
     // Set up the state to store the products:
     // Explanation: Inside the ProductsProvider, we use the useState hook from React to set up a state variable called products. This state will store the list of products. We initialize products with the initState, which contains some sample product data as a starting point.
-    const [products, setProducts] = useState<ProductType[]>(initState);
+    const [products] = useState<ProductType[]>(initState);
 
     // Wrap child components with the ProductsContext.Provider:
     // Explanation: The ProductsProvider component wraps its children components with the ProductsContext.Provider. This provider is created using the ProductsContext we defined earlier. We pass the value prop to the provider, which is an object containing the products array from our state. This value prop makes the products array accessible to all child components that consume the ProductsContext.

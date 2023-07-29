@@ -5,7 +5,7 @@ type PropType= {
     setViewCart: React.Dispatch<React.SetStateAction<boolean>>
 
 }
-const Footer = ({viewCart,setViewCart}:PropType) => {
+const Footer = ({viewCart}:PropType) => {
     const {totalItems,totalPrice}=useCart()
     const year:number = new Date().getFullYear()
     const pageContent=viewCart?<p className="m-2 footer p-10 bg-base-200 text-base-content">Shopping Cart: {year}</p>:(<>
